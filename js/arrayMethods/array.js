@@ -43,7 +43,7 @@ names.unshift("chanchal", "minakshi")
 
 
 let names2 = ["rakesh", "rahul", "ajay", "ranjit", "priya", "akash"]
-let sliceNum = names2.slice(2, 4)
+// let sliceNum = names2.slice(2, 3)
 
 // console.log(names2.slice(4))
 // console.log(sliceNum)
@@ -52,6 +52,9 @@ let sliceNum = names2.slice(2, 4)
 //splice       splice(startingIndex, how many value you want to remove,   adding new values)
 // key point:  it will change your original array 
 
- names2.splice(2, 3) 
+ names2.splice(2, 2) 
  console.log(names2)
+
+
+ 
 
