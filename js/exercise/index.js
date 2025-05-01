@@ -1,5 +1,6 @@
 // find the biggest and smallest number in array
-let coins = [1, 2, 5, 10, 20, 50, 100, 500, 25, -120, 0 ]
+let coins = [1100, 2, 5, 10, 20, 50, 100, 500, 25, 120, 0 ]
+let coinsNotes =  [ 2, 5, 10, 20, 50, 100, 25, [100, 200, 500, 1000, [0, 2, [5555]]] ]
 
 
 let bigNumber = 0;
@@ -16,12 +17,54 @@ for(let i = 0; i < coins.length; i++){
 
 }
 
-console.log("big Number", bigNumber)
-console.log("small Number", smallNumber)
+// console.log("big Number", bigNumber)
+// console.log("small Number", smallNumber)
+
+
+
+//sum of an array
+let reduceArray = coins.reduce((acc, curr) => acc += curr)
+// console.log(reduceArray)
+
+
+//sorting an array
+let sortingArray = coins.sort((a, b) => a - b)     //sorting an array form of accendign      
+// let sortingArr = coins.sort((a, b) => b - a)     //sorting an array form of desc
+ 
+
+//reverse()                                        //it will reverse your array
+// console.log(sortingArray.reverse())
+
+// console.log("original array", coinsNotes)
+
+let flating = coinsNotes.flat()                   //one level flatting array
+let flating2 = coinsNotes.flat(2)                 //two level flatting an array
+let infiniteFlatting = coinsNotes.flat(Infinity)  //infinite flatting
+ 
+
+//sum of an array
+let sum = 0;
+for(let i = 0; i< infiniteFlatting.length; i++){
+ sum += infiniteFlatting[i]
+}
+// console.log("sum of an array", sum)
 
 
 
 
-//
+//numbers which are greater than 500
+let result = []
+for(let i = 0; i< infiniteFlatting.length; i++){
+      if(infiniteFlatting[i] <= 500){
+        result.push(infiniteFlatting[i])
+      }
+   }
+
+   console.log(result)
+
+
+
+
+
 
 

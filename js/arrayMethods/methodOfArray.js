@@ -84,6 +84,13 @@ for(let i = 0; i < coins.length; i++){
  
  
 
+//sorting an array
+let sortingArray = coins.sort((a, b) => a - b)     //sorting an array form of accendign      
+// let sortingArr = coins.sort((a, b) => b - a)     //sorting an array form of desc
+let flating = coinsNotes.flat()                   //one level flatting array
+let flating2 = coinsNotes.flat(2)                 //two level flatting an array
+let infiniteFlatting = coinsNotes.flat(Infinity)  //infinite flatting
+
 
 
 
