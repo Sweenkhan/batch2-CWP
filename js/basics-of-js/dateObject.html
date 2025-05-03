@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date object in js</title>
+</head>
+<body>
+    
+<h2 id="time"></h2>
+
+
+
+
+
+    <script>
+      let date =  new Date()                    //it will give you an insantce of date object
+
+    
+
+    //   console.log(date)
+    //   console.log(date.getDate())    // you will get date   
+    //   console.log(date.getDay())     //you will get day
+      console.log(date.toLocaleDateString())
+      console.log(date.toLocaleTimeString())
+    //   console.log(date.setDate(2025, 5, 3, 3, 13))
+ 
+
+    function getTime(){
+        let time = date.toLocaleTimeString()
+        return time
+    }
+
+    setInterval(() => {
+        console.log(getTime())
+    }, 1000)
+
+ 
+
+
+    </script>
+</body>
+</html>
