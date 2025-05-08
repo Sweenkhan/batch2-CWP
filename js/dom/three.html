@@ -46,27 +46,27 @@
       //   //firstElementChild, lastElementCHild, parentElement, nextElementSibling, previousElementSIbling
       let parent = document.querySelector(".week");
       let days = document.querySelectorAll(".day");
-      console.log(days[0]);
+    //   console.log(days[0]);
+    //   console.log(days[0].parentElement.children);
 
-      console.log(days[0].parentElement.children);
+    //  parent.appendChild(p)             
+
+       function createDay(dayName, bgColor, fontColor){
+              let p =   document.createElement("p")
+              p.innerText = `${dayName}`
+              p.style.backgroundColor= `${bgColor}`
+              p.style.color = fontColor
+              p.style.padding = "5px"
+              p.style.borderRadius = "3px"
+
+              return parent.appendChild(p)
+       }
 
 
-      //  parent.appendChild(p)             
 
-      //  function createDay(dayName, bgColor){
-      //         let p =   document.createElement("p")
-      //         p.innerText = `${dayName}`
-      //         p.style.backgroundColor= `${bgColor}`
-      //         p.style.color = "white"
-      //         p.style.padding = "5px"
-      //         p.style.borderRadius = "3px"
-
-      //         return parent.appendChild(p)
-      //  }
-
-      //  createDay("Thursday", "green")
-      //  createDay("Friday", "lightGreen")
-      //  createDay("saturday", "grey")
+       createDay("Thursday", "green", "black")
+       createDay("Friday", "lightGreen", "white")
+       createDay("saturday", "grey", "orange")
     </script>
   </body>
 </html>

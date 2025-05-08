@@ -1,0 +1,87 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>event propagation</title>
+  </head>
+  <body
+    style="
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+    "
+  >
+    <div
+      class="parent"
+      style="
+        display: flex;
+        justify-content: center;
+        min-height: 200px;
+        border: 1px solid black;
+        padding: 20px;
+        border-radius: 10px;
+      "
+    >
+      parent
+      <h2 style="width: fit-content; border: 2px solid grey; padding: 10px">
+        (child) this is our heading
+      </h2>
+    </div>
+
+    <a href="http://www.google.com">google</a>
+
+    <script>
+      let parent = document.querySelector(".parent");
+      let child = document.querySelector("h2");
+
+      // event bubbling :
+      //by default event is going, bottom to up OR child to parent
+
+      // parent.addEventListener("click", (e) => {
+      //      console.log("hello i am parent")
+      // })
+
+      // child.addEventListener("click", (e) => {
+      //     console.log("hello, i am child")
+      // })
+
+      //event capturing
+      //it will go, parent to child OR top to bottom
+
+      // parent.addEventListener("click" , (e) => {
+      //     console.log("hello i am parent")
+      // }, true)
+
+      // e.stopPropagation()
+      // child.addEventListener("click" , (e) => {
+      //     console.log("hello i am child")
+      // }, true)
+
+
+
+
+      // stop prapagation will stop behaviour, like bottom to up and up to bottom-------------
+
+
+      parent.addEventListener("click", (e) => {
+        e.stopPropagation(); // it will stop propation
+        console.log("hello i am parent");
+      });
+
+      child.addEventListener("click", (e) => {
+        e.stopPropagation();
+        console.log("hello i am child");
+      });
+
+
+      
+      let ancor = document.querySelector("a");
+
+      ancor.addEventListener("click", (e) => {
+        e.preventDefault(); // it will stop the default behaviour
+      });
+    </script>
+  </body>
+</html>

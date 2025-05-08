@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event in js</title>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- old way adding event  -->
+        <button onclick="alert('hello, welcome')">click me</button>  
+
+        <button id="secondBtn">Greet</button>
+        <div id="greet"></div>
+    </div>
+
+
+
+    <script>
+
+
+       let secondBtn =  document.querySelector("#secondBtn")
+
+
+    // 2nd way to handle an event   
+       secondBtn.onclick = () => {
+        let greet =  document.querySelector("#greet")
+        greet.innerHTML = "hello, and welcome to our website"
+       }
+
+
+   // 3rd and final way to add an event
+    secondBtn.addEventListener("dblclick", (event) => {
+        let greet =  document.querySelector("#greet")
+            greet.innerHTML = "hello, and welcome to our website"
+
+        // console.log(event.target.innerText)
+    })
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>
