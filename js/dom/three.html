@@ -1,0 +1,72 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .red {
+        background-color: orangered;
+        opacity: 0.8;
+        color: white;
+        font: 600;
+        padding: 5px;
+        border: 1px solid red;
+        border-radius: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h2>Week days</h2>
+      <div class="week">
+        <p class="day red" id="one">Sunday</p>
+        <p class="day">Monday</p>
+        <p class="day">Tuesday</p>
+        <p class="day">Wednesday</p>
+      </div>
+
+      <img
+        alt="dummy-Image"
+        src="https://images.unsplash.com/photo-1744871358126-0b5acac38ef6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNHx8fGVufDB8fHx8fA%3D%3D"
+      />
+    </div>
+
+    <script>
+      // element create access update delete in dom;
+
+      //   let p =   document.createElement("p")
+      //   p.innerText = "Thursday"
+      //   p.style.backgroundColor= "green"
+      //   p.style.color = "white"
+
+
+
+
+
+      //   //firstElementChild, lastElementCHild, parentElement, nextElementSibling, previousElementSIbling
+      let parent = document.querySelector(".week");
+      let days = document.querySelectorAll(".day");
+      console.log(days[0]);
+
+      console.log(days[0].parentElement.children);
+
+
+      //  parent.appendChild(p)             
+
+      //  function createDay(dayName, bgColor){
+      //         let p =   document.createElement("p")
+      //         p.innerText = `${dayName}`
+      //         p.style.backgroundColor= `${bgColor}`
+      //         p.style.color = "white"
+      //         p.style.padding = "5px"
+      //         p.style.borderRadius = "3px"
+
+      //         return parent.appendChild(p)
+      //  }
+
+      //  createDay("Thursday", "green")
+      //  createDay("Friday", "lightGreen")
+      //  createDay("saturday", "grey")
+    </script>
+  </body>
+</html>

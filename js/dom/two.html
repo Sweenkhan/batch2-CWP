@@ -1,0 +1,114 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document object model</title>
+    <style>
+        .red{
+            background-color: red;
+            opacity: 0.8;
+            color: white;
+            font: 600;
+            padding: 5px;
+            border: 1px solid red;
+            border-radius: 3px;
+        }
+
+        .orange {
+            background-color: orangered;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="wrapper">
+        <div class="week">
+            <p class="day" id="one">Sunday</p>
+            <p class="day">Monday</p>
+            <p class="day">Tuesday</p>
+            <p class="day">Wednesday</p>
+        </div>
+        <img alt="dummy-Image"/>
+    </div>
+
+
+    <script>
+        let parent = document.querySelector(".week")
+        let children = document.querySelectorAll(".day")
+
+        let students = ["rahul", "rakesh", "ranjit", "ravi"]
+     
+        // console.log(students)
+       let result =  students.map( function(student){
+              return student
+        })
+        // console.log(result)
+
+        // let result2 = children.map((child) => {
+        //             return child
+        // })
+
+
+
+
+        // --------------------------------working on nodeList-----------------------------
+        //    A. forEach will work on NodeList
+        // children.forEach((child) => {
+        //     console.log(child.innerHTML)
+        //  })
+
+        let convertingArray = Array.from(children)                         //converting nodelist to an array
+        
+        let result3 = convertingArray.map((para) => {
+                  return para.innerText
+        })
+
+        // console.log(result3)
+
+
+
+
+
+
+
+        // --------------------------working with attributes in dom---------------------------------
+            let firstPara = document.querySelector(".day")
+            firstPara.setAttribute("height", "300px")
+        //    console.log( )
+
+
+        let img = document.querySelector("img")
+        img.setAttribute("src", "https://images.unsplash.com/photo-1745977561659-56a67855b2ce?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNnx8fGVufDB8fHx8fA%3D%3D")
+   
+        img2 =  "https://images.unsplash.com/photo-1744871358126-0b5acac38ef6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNHx8fGVufDB8fHx8fA%3D%3D"
+
+
+        // setTimeout(() => {
+        //     // img.removeAttribute("src")                            //removing attributes
+        //     img.setAttribute("src", img2 )                           //adding new attributes
+        // }, 5000);
+        
+        //     if(firstPara.hasAttribute("height")){                    //checking attributes
+        //     firstPara.removeAttribute("height")
+        // }
+       
+
+
+// -------------------------------------working with classList-------------------------------------
+        children[0].classList.add("red")
+ 
+        setTimeout(() =>{ 
+            children[0].classList.add("orange")
+            children[1].classList.remove("day")
+            children[2].classList.replace("day", "day-Three")
+            
+            console.log( children[3].className.includes("day"))              //checking class in included or not
+        }, 3000)
+
+
+
+      
+    </script>
+</body>
+</html>
