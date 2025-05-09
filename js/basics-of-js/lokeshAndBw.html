@@ -73,8 +73,109 @@
 
 
         // console.log(60 !== 70)          //true
+        // console.log(!true === false)    
 
-        console.log(!true === false)    
+
+
+        // loops
+        // for( let count = 1; count <= 10; count++  ){
+        //       console.log(count, "sween")
+        // }
+        
+        
+       let names = ["seeta", "geeta", "kavita", "sunita", "rakesh", "lokesh", "suresh", "ganesh"]
+
+    // console.log(names[0])                 //output:  "seeta"
+    //    console.log(names.length)           //output:   4 
+
+
+    // A. foor loop
+    // syntax: 
+    //    for(let i = 0; i < names.length; i++){
+    //       console.log(i + 1, names[i] )
+    //    }
+
+
+
+     // B. while loop
+    //   let i = 0
+    //    while(i < names.length){
+    //     console.log(i + 1, names[i] )
+    //     i++
+    //    }
+
+
+
+
+
+    // C. for each loop-----------------------------------------------
+    // names.forEach((name, i) => {
+    //       console.log(i+1, name)
+    // })
+
+
+
+    //D. for of loop---------------------------------------------------
+    //  for(let name of names){ 
+    //     console.log(name)
+    //  }
+
+
+
+    let user = {
+        name: "lokesh",
+        age: 22,
+        course: "full stack",
+        email: "lokesh@gmail.com",
+        mobile: [588558855, 588588558],
+        address: {
+           temp : "b-12, 1st avenue",
+           perm: "n-12, 2nd avenue"
+        }
+    }
+
+    // console.log( Object.keys(user))
+    // console.log(Object.values(user))
+
+
+    // console.log(user.mobile)   // dot notation  
+    // console.log(user["name"])  // square notation
+
+
+
+// E. for in loop--------------------------------------------------
+    // for(let key in user){
+    //     // console.log(k)
+    //     console.log(key, ": " + user[key])
+    // }
+
+
+
+
+
+let username = "sween"
+let count = 1
+
+// F. while loop 
+while(count < 1){
+     console.log("while", username)
+     count++
+}
+
+
+
+//G.  do while loop, 
+// will always work at least once
+do{
+    console.log("do while" , username)
+    count++
+}while(count < 1)
+
+
+
+
+       
+
 
 
      </script>
