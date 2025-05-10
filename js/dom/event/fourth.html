@@ -1,0 +1,58 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>everything about events</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <input type="text" class="userName" placeholder="write your username:"/> 
+      <button >input focus</button>
+      <p class="result"></p>
+    </div>
+
+    <script>
+      // events with input: keypress or keydown, keyup, input
+
+
+      let input = document.querySelector(".userName"); 
+      let result = document.querySelector(".result") 
+      let btn = document.querySelector("button") 
+
+
+
+      input.addEventListener("input", (e) => {
+             console.log("input")
+             input.value = e.target.value.toUpperCase() 
+             result.innerText = e.target.value 
+
+      });
+
+
+    //   A. keydown:  when you will key down, it will get trigred
+      input.addEventListener("keydown", (e) =>{
+                console.log("keydown", e.key)
+      })
+ 
+
+    //  B. keyup: will trigger when you release the key
+      input.addEventListener("keyup", (e) =>{ 
+             if(e.key === "Enter"){                                     //form is submiting
+                e.target.blur()                                //focus value will get false                    
+                input.value = ""                               //cleaning the input
+             } 
+      })
+
+
+
+      btn.addEventListener("click", (e) => { 
+                input.focus()  
+      })
+
+      
+
+       
+      
+    </script>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.quiz-container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.option {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.3s;
+}
+
+.hidden{
+    display: none;
+}
+    </style>
+</head>
+<body>
+    
+    <div class="wrapper">
+
+        <div class="quiz-container">
+            <h1>What is 2+ 2?</h1>
+            <div class="options">
+                <button class="option">6</button>
+                <button class="option">8</button>
+                <button class="option">4</button>
+                <button class="option">2</button>
+            </div>
+            <button class="next-btn" style="justify-content: right; width: 100%;">Next question</button>
+        </div>
+
+        <div class="result hidden">
+         <p  >your score is <span class="score"></span></p>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
