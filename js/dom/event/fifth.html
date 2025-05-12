@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouse events</title>
+    <style>
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper" style="display: flex; align-items: center; justify-content: center; flex-direction: column; min-width: 400px; background-color: black; color: white;">
+        <h2>class is live</h2>
+        <p class="hide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet provident nam repudiandae, sint saepe voluptate aliquam sed quos delectus autem tempora repellendus quisquam, magni alias! Placeat maiores distinctio ipsa sunt.</p>
+        
+    </div>
+    
+
+    <script>
+
+        let div = document.querySelector(".wrapper")
+        let p = document.querySelector("p")
+
+
+        
+        // div.addEventListener("mouseenter", () => {
+        //     div.style.backgroundColor = "red"
+        //     p.classList.remove('hide')
+
+        // })
+
+        // div.addEventListener("mouseout", () => {
+        //     div.style.backgroundColor = "black"
+        //     p.classList.add('hide')
+        // })
+ 
+
+
+
+
+
+
+        // div.onmouseenter = () => {
+        //     div.style.backgroundColor = "red"                 //it will not work
+        // }
+
+        // div.onmouseenter = () => {
+        //     div.style.backgroundColor = "orange"             //this event will get excute
+        // } 
+
+
+
+
+
+        // this all will get trigrred at the same time
+           div.addEventListener("mouseenter", () => { 
+            console.log("hello")
+        })
+
+        div.addEventListener("mouseenter", () => {
+            console.log("how are you")
+        })
+
+        div.addEventListener("mouseenter", () => { 
+            console.log("i am ")
+        })
+
+        div.addEventListener("mouseenter", () => {
+            console.log("sween khan")
+        })
+ 
+        
+ 
+
+    </script>
+</body>
+</html>
