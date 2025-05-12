@@ -50,10 +50,13 @@ function showQuestion() {
 
   optionsContainer.innerHTML = "";
   questions[currentQuestionIndex].options.forEach((option) => {
+
     let btn = document.createElement("button");
     btn.innerText = option;
     btn.classList.add("option");
+    
     optionsContainer.appendChild(btn);
+
   });
 }
 

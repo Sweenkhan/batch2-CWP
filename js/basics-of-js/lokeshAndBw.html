@@ -157,20 +157,83 @@ let username = "sween"
 let count = 1
 
 // F. while loop 
-while(count < 1){
-     console.log("while", username)
-     count++
-}
+// while(count < 1){
+//      console.log("while", username)
+//      count++
+// }
 
 
 
 //G.  do while loop, 
 // will always work at least once
-do{
-    console.log("do while" , username)
-    count++
-}while(count < 1)
+// do{
+//     console.log("do while" , username)
+//     count++
+// }while(count < 1)
 
+
+
+
+let questions= [
+    {
+        question: "what is 4 + 4?",
+        options: [4, 6, 8, 10],
+        answer: 8
+    },
+    {
+        question: "what is 3 + 3?",
+        options: [4, 6, 8, 10],
+        answer: 6
+    },
+    {
+        question: "what is 8 + 8?",
+        options: [4, 6, 8, 16],
+        answer: 16
+    }
+]
+
+
+
+// questions.forEach((questionObj) => {
+//            console.log(questionObj)
+// })
+
+//  questions[0].options.forEach((opt) => {
+//             console.log(opt + 100)
+//  }) 
+
+
+
+let array = [3, 6, 9, 12, 15]
+
+
+// reduce function only use when you want to sum of numbers           : number output
+let sum  = array.reduce((curr, acc) => {
+  return curr + acc
+})
+            //    OR
+let sum2 = array.reduce((curr, acc) => curr + acc )
+
+
+
+
+
+//filer: function use only when you want to filter calue from array   : array output
+let filterArr = array.filter((number) => {
+           return number < 9 
+})
+        //   OR
+let filterArr2 = array.filter( number => number < 9) 
+
+
+
+
+//map: function use when you want to do somethind on every value     : array output
+let mapArr = array.map((num) => {
+          return num + 100
+})
+
+console.log(mapArr)
 
 
 
