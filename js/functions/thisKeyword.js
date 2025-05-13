@@ -31,5 +31,5 @@ let profile = {
 }
 
 profile.fullName()
- profile.greet()
+//  profile.greet()
 
