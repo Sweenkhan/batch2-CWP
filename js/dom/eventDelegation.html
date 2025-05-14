@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul style="padding: 50px; border: 1px solid black; border-radius: 5px;">
+        <li>home</li>
+        <li>about</li>
+        <li>contact</li>
+        <li>service</li>
+        <p>its an paragraph</p>
+    </ul>
+
+
+    <script>
+        // document.querySelector("ul").addEventListener("click", (e)=>{
+        //       if (e.target.tagName === "LI"){
+        //         console.log(e.target.textContent)
+        //       }
+        //  })
+    
+     let list = document.querySelectorAll("li")
+     let ul = document.querySelector("ul")
+
+    //  list[0].addEventListener("click", (e)=>{
+    //     console.log(e.target.textContent)
+    //  })
+    //  list[1].addEventListener("click", ()=>{
+    //  console.log(e.target.textContent)
+    //  })
+    //  list[2].addEventListener("click", ()=>{
+    //    console.log(e.target.textContent)
+    //  })
+    //  list[3].addEventListener("click", ()=>{
+    //    console.log(e.target.textContent)
+    //  })
+
+
+    // approach 2
+   
+    // list.forEach((li)=>{
+    //    li.addEventListener('click', (e) => {
+    //          console.log(e.target.textContent)
+    //    })
+    // })
+
+
+
+    //approach 3
+    //event delegation on ul tag
+    // Event delegation is a technique in JavaScript where a single event listener is attached to a parent
+    //  element to handle events for all its child elements. It leverages the concept of event bubbling, 
+    // where an event triggered on a child element propagates up the DOM tree to its parent elements.
+    //  Instead of attaching individual event listeners to each child, a single listener on the parent can efficiently manage events for all of them. 
+
+    
+    ul.addEventListener('click', (e)=>{
+            if(e.target.tagName === "LI"){
+                console.log(e.target.textContent)
+            }
+
+            if(e.target.tagName === "P"){
+                e.target.style.backgroundColor = "green"
+            }
+
+    })
+
+
+   
+    
+    </script>
+</body>
+</html>

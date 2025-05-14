@@ -73,6 +73,7 @@ function nextQuestion() {
 
 //Display current question
 function showQuestion() {
+  selectedAnswer = null
   resultContainer.classList.add("hidden");
 
   //get current question
@@ -130,6 +131,7 @@ function showResults() {
 function startQuiz(){
     currentQuestionIndex = 0;
     score= 0;
+    nextButton.classList.remove("hidden");
     showQuestion();
 }
 
