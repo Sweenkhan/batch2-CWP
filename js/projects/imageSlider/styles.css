@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    gap: 50px;
 }
 
 .parent{ 
@@ -20,6 +21,7 @@
     position: absolute;
     top: 0;
     left: 0;
+     transition: left 2s ease;
 }
 
 .image{
@@ -36,5 +38,8 @@ img{
 button{
     padding: 10px 20px;
     border: 1px solid black;
+    border-radius: 5px;
+    color: white;
+    background-color: black;
 }
  
