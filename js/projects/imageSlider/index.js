@@ -7,6 +7,7 @@ let allImages = document.querySelectorAll("img")
 
 let currentPx = 0;
 next.addEventListener("click", () => { 
+    
     if(currentPx === (allImages.length-1) * 400){ 
         currentPx = 0
         slider.style.left = `-${currentPx}px`

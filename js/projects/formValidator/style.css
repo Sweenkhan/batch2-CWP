@@ -23,26 +23,70 @@ form{
     flex-direction: column;
 }
 
+.form-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-group{
+   margin-bottom: 15px;
+   position: relative;
+}
+
 label{
     /* text-align: left; */
     align-self: flex-start;
     margin-bottom: 5px;
 }
 
-input{
-    margin-bottom: 20px;
+input{ 
     width: 400px;
     padding-left: 10px;
-    font-size: 20px;
+    font-size: 18px;
     border-radius: 5px;
-    outline: none;
+    outline: none;  
 }
 
-button{
-    width: 80%;
+#password{
+    position: relative; 
+    padding-right: 20px;
+}
+
+.showPassword{
+    position: absolute;
+    right: 2px;
+    top: 27px;
+    border: none;
+    cursor: pointer;
+    z-index: 5;
+    /* background-color: black; */ 
+}
+
+.error{
+    font-size: 0.8em;
+    color: red;
+    position: absolute;
+    bottom: -13px;
+    z-index: 2;
+}
+
+.error.lastError{
+    bottom: -30px; 
+}
+
+.lastForm-group{
+    margin-bottom: 35px;
+}
+
+.submit{
+    width: 50%;
     background-color: black;
     color: white;
     border-radius: 5px;
     font-size: 24px;
     border: 1px solid black;
 }
+
+
