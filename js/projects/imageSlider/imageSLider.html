@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+ <div class="wrapper">
+      <button class="prev">prev</button>
+      <div class="parent"> 
+
+      <div class="images">
+        <div class="image"><img src="./images/first.avif" alt=""/></div> 
+      </div>
+      
+      </div>
+      <button class="next">next</button>
+    </div>
+
+
+    <script >
+        let imageELement = document.querySelector("img")
+        let next = document.querySelector(".next")
+        let prev = document.querySelector(".prev") 
+        let imageAddress = ["first", "second", "third", "fourth", "fifth"]
+ 
+        let currentImage = 0
+
+        next.addEventListener("click", () => {
+            currentImage++
+
+            if(currentImage < imageAddress.length){
+            imageELement.src = `./images/${imageAddress[currentImage]}.avif`
+            } else {
+            currentImage = 0
+            imageELement.src = `./images/${imageAddress[currentImage]}.avif` 
+            }
+        })
+
+
+        prev.addEventListener("click", () => {
+            currentImage--
+
+            if(currentImage < 0){
+                currentImage = 4
+                 imageELement.src = `./images/${imageAddress[currentImage]}.avif`
+            } else { 
+                imageELement.src = `./images/${imageAddress[currentImage]}.avif`
+            }
+        })
+
+
+    </script>
+
+    
+</body>
+</html>

@@ -31,8 +31,8 @@ const questions = [
   },
 ];
 
-//Get DOM elements
 
+//Get DOM elements
 let questionElement = document.querySelector(".question");
 let optionsContainer = document.querySelector(".options-container");
 let nextButton = document.querySelector(".next-btn");
@@ -41,15 +41,20 @@ let questionNumberELement = document.querySelector(".question-number");
 let questionContainer = document.querySelector(".question-container");
 let scoreElement = document.querySelector(".score");
 let restartButton = document.querySelector(".restart-btn")
+let timeElement = document.querySelector(".timer")
 
 let currentQuestionIndex = 0;
 let score = 0;
 let selectedAnswer = null;
+let startTimer = 10
 
 
 
 //next question
 function nextQuestion() {
+  console.log(score)
+  startTimer = 10
+  
   if (selectedAnswer === null) {
     alert("please select an answer!");
     return;
@@ -98,10 +103,9 @@ function showQuestion() {
 
     button.addEventListener("click", () => selectAnswer(option));
     optionsContainer.appendChild(button);
-
-
   });
 }
+
 
 
 // handle Answer selection
@@ -123,19 +127,40 @@ function showResults() {
     (questionNumberELement.textContent = ""),
     (optionsContainer.innerHTML = ""),
     nextButton.classList.add("hidden");
-  scoreElement.textContent = score;
-  resultContainer.classList.remove("hidden");
+    scoreElement.textContent = score;
+    resultContainer.classList.remove("hidden");
+    timeElement.classList.add("hidden")
 }
 
-
+//starting quiz second time
 function startQuiz(){
     currentQuestionIndex = 0;
     score= 0;
     nextButton.classList.remove("hidden");
-    showQuestion();
+    showQuestion(); 
+    startTimer = 10
+    timeElement.classList.remove("hidden")
 }
+
+
+   
+ 
+  
+  var intervalID = setInterval(() => {
+        startTimer--
+        if(startTimer < 0){ 
+          if(selectedAnswer === null) selectedAnswer = false 
+          nextQuestion()
+          startTimer = 10
+          timeElement.innerHTML = startTimer
+        }else{
+          timeElement.innerHTML = startTimer
+        }
+  }, 1000);
+  
+ 
+
 
 restartButton.addEventListener("click", startQuiz)
 nextButton.addEventListener("click", nextQuestion);
-
 showQuestion();

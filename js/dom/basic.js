@@ -8,7 +8,7 @@ let heading3 = document.getElementsByName("f-heading")[0]
 
 let input = document.querySelector("input[type='password']")
 
- input.style.padding = "5px"
+input.style.padding = "5px"
   
 
 
@@ -17,7 +17,7 @@ let title2 = document.querySelector(".heading")
 let title3 = document.querySelector("#first-heading")
 
 let list = document.querySelector(".list")
-let list2 = document.querySelectorAll(".list")
+let list2 = document.querySelectorAll(".list")         //nodelist  
 let para = document.querySelector(".paragraph")
 
 
