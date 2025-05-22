@@ -8,7 +8,7 @@ let allImages = document.querySelectorAll("img")
 let currentPx = 0;
 next.addEventListener("click", () => { 
     
-    if(currentPx === (allImages.length-1) * 400){ 
+    if(currentPx === (allImages.length-1) * 400){  
         currentPx = 0
         slider.style.left = `-${currentPx}px`
        return
@@ -21,16 +21,12 @@ next.addEventListener("click", () => {
 
 
 
-prev.addEventListener("click", ()=>{
-
+prev.addEventListener("click", ()=>{ 
     if(currentPx === 0) {
         alert("this is first image")
-        // return
-    }else{
+        return
+    }  
          currentPx -= 400
-         slider.style.left = `-${currentPx}px`
-         console.log(currentPx)
-    }
-
-   
+         slider.style.left = `-${currentPx}px` 
+     
 })
