@@ -21,6 +21,6 @@ console.log(card)
 
 //Array destructering
 let names = ["rakesh", "rahul", "ravi"]
-  .at.
+
 
 
