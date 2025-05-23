@@ -23,8 +23,6 @@ let {debitCardNumber : card} = profile                           //giving new na
 // console.log(card)
 
 
-
-
 //B. Array destructering
 let names = ["rakesh", "rahul", "ravi", "ranjit"]
 
