@@ -33,7 +33,13 @@ function sendEmail(callBack){
 
 
 
-// callback hell
+// CALLBACK HELL:-----
+
+// note: Callback hell  is a situation in JavaScript where deeply nested callback functions
+//  make code difficult to read, understand, and maintain. This often occurs when handling
+//  asynchronous operations where one operation's completion depends on the result of another
+
+ 
 
 // loginUser(()=>{
 //     fetchUser(()=>{
