@@ -34,7 +34,7 @@ function renderingProduct(products){
          imageElement.setAttribute("src", product.image)
          productDiv.appendChild(imageElement)
 
-         titleElement.textContent = product.title.length < 25 ? product.title : product.title.substring(0, 25)
+         titleElement.textContent = product.title.length < 25 ? product.title : `${product.title.substring(0, 23)}...`
           productDiv.appendChild(titleElement)
         //  contentElement.appendChild(titleElement)
           
