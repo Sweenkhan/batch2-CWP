@@ -19,7 +19,7 @@ function renderingProduct(products){
     
      products.forEach((product) =>{ 
 
-         console.log(product)
+        //  console.log(product)
 
          let productDiv = document.createElement("div")
          let imageElement = document.createElement("img")

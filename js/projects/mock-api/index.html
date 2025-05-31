@@ -3,7 +3,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register Form</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="../formValidator/style.css" />
   </head>
   <body>
     <div class="wrapper">
@@ -17,41 +17,36 @@
           <div class="form-group">
             <label for="firstName">First Name</label>
             <input type="text" name="firstName" id="firstName" />
-            <div class="error" id="firstNameError"></div>
           </div>
 
           <div class="form-group">
             <label for="lastName">Last Name</label>
-            <input type="text" name="lastName" id="lastName" />
-            <div class="error" id="lastNameError"></div>
+            <input type="text" name="lastName" id="lastName" /> 
           </div>
 
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" />
-            <div class="error" id="emailError"></div>
+            <input type="email" name="email" id="email" /> 
           </div>
 
           <div class="form-group">
             <label for="mobile">Mobile</label>
-            <input type="number" name="mobile" id="mobile" />
-            <div class="error" id="mobileError"></div>
+            <input type="number" name="mobile" id="mobile" /> 
           </div>
 
           <div class="form-group lastForm-group">
             <label for="password">Password</label>
-            <input type="password" name="password" id="password" />
-            <div class="error lastError" id="passwordError"></div>
-            <button class="showPassword">show</button>
+            <input type="password" name="password" id="password" /> 
+            <!-- <button class="showPassword">show</button> -->
           </div>
 
-          <button class="submit"  type="submit">Submit</button>
-
-          <!-- <button type="reset">Reset</button> -->
+            <button class="submit"  type="submit">Submit</button>
         </form>
+        <button class="get-data">get data</button>
+        <button class="delete-data">delet data</button>
       </div>
     </div>
 
-    <script src="./script.js"></script>
+    <script src="./index.js"></script>
   </body>
 </html>

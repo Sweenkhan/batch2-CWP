@@ -5,7 +5,7 @@
 // GET, POST, PUT, PATCH, DELETE
 
 // syntax :    fetch(url, options)
-
+// fetch(url, {method,  headers, body})
 
 
 //get request (by default)

@@ -12,7 +12,7 @@ function clickAndFetch(){
     .then((data) => {
         return data.json();
     })
-    .then((res) => { 
+    .then((res) => {  
           fetchData(res.results)
     })
     .catch((err) => {
@@ -24,7 +24,7 @@ function clickAndFetch(){
 
 
     function fetchData(data){
-          console.log(data)
+           
  
            div.innerHTML = ""
 
