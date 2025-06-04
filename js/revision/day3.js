@@ -38,11 +38,10 @@ let c = 10
 
 let num = "10.50"
  
-console.log(parseInt(num))          //10
+console.log( parseInt(num))          //10
 console.log(parseFloat(num))        //10.5   you will get the value after decimal also
-
 
 let stringToNumber = Number(num)
 let newNum = 20 
-
-console.log( newNum + stringToNumber  )  
+ 
+// console.log( newNum + stringToNumber  )  
