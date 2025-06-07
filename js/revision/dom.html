@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h2>this is title</h2>
+        <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, maxime. Sequi omnis blanditiis consectetur voluptatibus ducimus molestias cupiditate, nam deserunt dignissimos. Voluptatem odio, minus unde cupiditate architecto numquam tempora aliquam!</p>
+        <ul>
+            <li>home</li>
+            <li>about</li>
+            <li>contact</li>
+             
+        </ul>
+    </div>
+    
+    <script>
+        // console.log(document)
+
+       let h2 = document.querySelector("h2")
+       let div = document.querySelector(".wrapper")
+       let para = document.querySelector("#para")
+       let list = document.querySelectorAll("li")
+
+
+       para.innerHTML = para.innerHTML.toUpperCase()
+       h2.innerHTML = "this is our main title"
+
+       console.log(list)
+       list.forEach((li) =>{
+           li.style.backgroundColor = "green"
+           li.style.color = "white"
+       })
+
+       list[0].remove()
+
+       
+
+
+    </script>
+</body>
+</html>
