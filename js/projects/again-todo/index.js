@@ -1,57 +1,58 @@
 let input = document.querySelector("input")
-let saveBtn = document.querySelector(".save")
-let ul = document.querySelector("ul")
+let btn = document.querySelector("button")
+let unOrderList = document.querySelector("ul")
 
 
-// saveBtn.addEventListener("click", ()=>{
-        
-//   if(input.value.trim() === ""){
-//           alert("please fill out the input")
-//           return
-//   } 
+btn.addEventListener("click", () =>{
 
-//   let li =  document.createElement("LI") 
-//    li.innerHTML = `${input.value}<button class="delete">delete</button>`
-//    ul.appendChild(li)
- 
-//    li.firstElementChild.addEventListener("click", (e)=>{
-//     li.remove()
-//    })
-
-//    input.value = "" 
-// })
+   if(input.value.trim() === ""){
+      alert("please fill out the input")
+      return
+   }
 
 
-//  OR
+   let li = document.createElement("li")
+   li.innerHTML = `${input.value}  <button class="delete">X </button>`
 
-let lists = []
+   unOrderList.appendChild(li)
 
-saveBtn.addEventListener("click", ()=>{
 
-       if(input.value.trim() === ""){
-          alert("please fill out the input")
-          return
-     } 
+   li.lastElementChild.addEventListener("click", () => {
+       li.remove()
+   })
 
-     lists.push(input.value.trim())
-     createLi()
-     input.value = ""
+   input.value = ""
+   
 })
 
 
 
-function createLi(){
-  ul.innerHTML = ""
 
-   lists.forEach((list)=>{
 
-   let li =  document.createElement("LI") 
-   li.innerHTML = `${list}<button class="delete">delete</button>`
-   ul.appendChild(li)
- 
-   li.firstElementChild.addEventListener("click", (e)=>{
-    li.remove()
-   })  
 
-   })
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// console.log("welcome to our website")
+// document.body.style.backgroundColor = "black"
+
+// document.querySelector(".container").style.minWidth = "500px"

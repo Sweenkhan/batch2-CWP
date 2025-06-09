@@ -18,6 +18,7 @@
 
 <body>
     <div>
+        <input type="date"/>
         <ul> 
         <li class="first">home</li>
         <li >product</li>
@@ -36,8 +37,9 @@
         let allList = document.querySelectorAll("li")                       //it will give you a nodelist, you can use forEach loop here
         let para = document.querySelector("p")
         let div = document.querySelector(".myChoice")
-
-
+        let input = document.querySelector("input")
+         
+ 
         // console.log(para.innerHTML = "")                                         //you will get everything in between p tag,
         // console.log(para.innerText)                                                 //you will get only those text, which is visible
         //console.log(para.textContent)                                               //you will get all textCOntent, doesn't matter if text is hidden
@@ -51,6 +53,9 @@
 
         div.prepend(h2)
 
+        setTimeout(() => {
+           console.log(input.value)
+        }, 7000);
         // div.append(h2)
 
        
