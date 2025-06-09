@@ -1,0 +1,120 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            background-color: green;
+        }
+
+        .onceCLicked{
+          padding: 0 10px;
+          margin-bottom: 5px;
+          font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul> 
+        <li class="first">home</li>
+        <li >product</li>
+        <li >contact</li>
+        <li>about</li>
+        </ul>
+        <div class="myChoice"></div>
+ 
+        <p> <span style="display: none;"> Lorem, ipsum dolor</span>  sit amet consectetur adipisicing elit. Repellat, perferendis. Eaque aperiam iste qui itaque dolorum dolore ad, ipsa iusto harum optio ex laudantium unde tenetur quia temporibus, molestiae eligendi? </p>
+
+    </div>
+
+
+
+    <script> 
+        let allList = document.querySelectorAll("li")                       //it will give you a nodelist, you can use forEach loop here
+        let para = document.querySelector("p")
+        let div = document.querySelector(".myChoice")
+
+
+        // console.log(para.innerHTML = "")                                         //you will get everything in between p tag,
+        // console.log(para.innerText)                                                 //you will get only those text, which is visible
+        //console.log(para.textContent)                                               //you will get all textCOntent, doesn't matter if text is hidden
+
+        para.innerText = para.innerText.toUpperCase()
+
+        let h2 =  document.createElement("h2")
+
+        // h2.innerText = "This is our title"
+        h2.innerHTML = "<span>THis </span> is our title"
+
+        div.prepend(h2)
+
+        // div.append(h2)
+
+       
+        // allList.forEach((list) => {
+        //           list.style.backgroundColor = "black"
+        //           list.style.color = "white"
+        //           list.style.listStyleType = "none"
+
+        //           list.classList.remove("first")
+        //           list.classList.add("onceClicked")
+        //         //   list.classList.replace("first", "onceClicked")
+        //     })
+            
+            
+
+
+   
+
+
+
+
+            // let newArray =  Array.from(allList)                             //converting nodelist to an array
+
+            // let result =    newArray.map((list) =>{
+            //   return list.innerHTML
+            // })
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // console.log(allList)
+    //  let list1 = document.querySelector(".list1")
+    //  let list2 = document.querySelector(".list2")
+    //   let list3 = document.querySelector(".list3")
+    //  let list4 = document.querySelector(".list4")
+      
+    //  list1.style.backgroundColor = "lightgreen"
+    //  list2.style.backgroundColor = "lightgreen"
+    //  list3.style.backgroundColor = "lightgreen"
+    //  list4.style.backgroundColor = "lightgreen"
+
+
+    //  console.log(list1, list2)
+    </script>
+</body>
+</html>
