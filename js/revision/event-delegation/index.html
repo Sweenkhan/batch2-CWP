@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event delegation</title>
+    <style>
+        button {
+            height:40px;
+            width: 120px;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .wrapper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* flex-direction: column; */
+            flex-wrap: wrap;
+            gap: 10px; 
+            border: 1px solid grey;
+        }
+    </style>
+</head>
+<body style="   min-height: 100vh;">
+    <div class="wrapper"  >
+
+        <button style="background-color: red;">red</button>
+        <button style="background-color: green;">green</button>
+        <button style="background-color: lightgreen;">lightgreen</button>
+        <button style="background-color: yellow;">yellow</button>
+        <button style="background-color: gray;">gray</button>
+        <button style="background-color: pink;">pink</button>
+        <button style="background-color: skyblue;">skyblue</button>
+
+        <!-- <button>eight</button>
+        <button>nine</button> -->
+
+    </div>
+    
+    <script src="./index.js"></script>
+</body>
+</html>
