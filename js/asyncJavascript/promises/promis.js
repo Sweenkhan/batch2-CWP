@@ -16,6 +16,7 @@
 let promisOne = new Promise((resolve, reject)=>{
      // do an async task
      // DB calls, cryptography, network 
+     
 
      setTimeout(() =>{
         console.log("Async task is complete")
