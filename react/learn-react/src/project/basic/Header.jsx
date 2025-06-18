@@ -10,12 +10,12 @@ let logo = "e-commerce"
 
         <h2>{logo}</h2>
         <ul style={{display: "flex", justifyContent: "center", alignItems: "center", gap: "10px"}}>
-            
+
             <li>home</li>
             <li>contact</li>
             <li>about</li>
         </ul>
-        <p>Login</p>
+        <p>Log in</p>
 
         </div>
     )

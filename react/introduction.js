@@ -18,6 +18,8 @@
 //COMPONENT in react
 //note: block of code along with html and js.
 //component name should start from capital letter
+//for writing inline css you need two curly braces.
+//for writing js in html you need one curly braces
 
 
 //empty fragments <></>
