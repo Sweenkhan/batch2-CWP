@@ -4,34 +4,50 @@ import { useState } from "react"
 
 function App() { 
  
-  const [inputVal, setInputVal] = useState("")
+ let [name, setName] = useState("")
+ let [inputVal, setInputVal] = useState("")
+ let [email, setEmail] = useState("")
+ let [err, setErr] = useState("")
 
-  // const [list, setList] = useState([])
-
-
-
-  function handleClick(){
-          setInputVal('')
  
-          console.log(list)
+
+  function handleClick(){ 
+    console.log("working")
+    if(email.includes("@")){
+      alert("add @ in your email address")
+    }
+    setName(inputVal)
+    setInputVal("")
   }
 
 
-  // function handleChange(e){ 
-  //   setInputVal(e.target.value)
-  // }
+  function handleChange(e){  
+    let newEmail = e.target.value
+    
+    setEmail(newEmail)
+       if(!newEmail.includes("@")){
+         setErr("add @ in your email address")
+       }else{
+         setErr("")
+       }
  
+  }
+ 
+
+  
 
   return (
     <>
-    <div>
-      {/* <input onChange={handleChange} value={inputVal} /> */}
+    <div> 
+ 
+      <input type="text" onChange={(e) => setInputVal(e.target.value)} placeholder="enter your name" value={inputVal} />
+      <input type="email" onChange={handleChange} value={email} required />
+      <p style={{color: "red"}}>{err}</p>
 
-      <input onChange={ (e) => setInputVal(e.target.value) }  value={inputVal} />
-      
-      <button onClick={handleClick} >click me </button>
+      <button onClick={handleClick}> save </button>
+ 
+      <p>Name: {name.toUpperCase()}</p>
 
-      <p>{inputVal}</p>
     </div>
     </>
   )
