@@ -13,7 +13,9 @@ function ImageSlider({ images }) {
     function prevSlide(){
 
         setCurrentIndex((prev) => 
+
          prev === 0 ? images.length - 1 : prev-1
+         
         )
 
         // if(currentIndex === 0){
