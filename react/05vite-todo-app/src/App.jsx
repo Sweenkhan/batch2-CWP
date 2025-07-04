@@ -6,22 +6,23 @@ function App() {
 
   const [task, setTask] = useState("")                    //input value
   const [tasks, setTasks] = useState([])
+
   const [editStart, setEditStart] = useState(false)
   const [editItemId, setEditItemId] = useState("")
  
  
+//new task adding in setTask array   
 function handleAdd(){
 
   if(editStart){
 
-   let filterData = tasks.map((item) => item.id === editItemId ? item.text = task : item)
- 
-    // console.log(filterData)
+   let filterData = tasks.map((item) =>  item.id === editItemId ? item.text = task : item)
+  
+    console.log(filterData)
     setEditItemId("")
     setEditStart(false)
 
   } else {
-  
 
      setTasks((prev) => 
     [...prev, {
@@ -31,11 +32,8 @@ function handleAdd(){
       completed: false
     }]
 )
-
   }
 
-  
-  
 //changing input value to empty
 setTask("") 
 }
@@ -50,13 +48,11 @@ function handleDelete(id){
 
 
 
-function handleEdit(id){
-  setEditItemId(id)
+function handleEdit(id, text){
   setEditStart(true)
-  let filterData = tasks.filter((item) => item.id == id )
-
-  setTask(filterData[0].text)
-
+  setEditItemId(id)
+  setTask(text)
+  // let filterData = tasks.filter((item) => item.id == id )
 }
 
 
@@ -72,17 +68,20 @@ function handleEdit(id){
            <button onClick={handleAdd}>Add</button> 
         </div> 
 
+
+{/* task list dropdown */}
         <div className='dropdown-list'> 
 
          {
              tasks.map((item) => {
               return (
-                  <p key={item.id}> {item.text}   <span style={{paddingLeft: "70px"}} onClick={() => handleDelete(item.id)}>delete</span> <span onClick={ () => handleEdit(item.id)}>edit</span> </p>
+                  <p key={item.id}> {item.text}   <span style={{paddingLeft: "70px"}} onClick={() => handleDelete(item.id)}>delete</span> <span onClick={ () => handleEdit(item.id, item.text)}>edit</span> </p>
               )
              })
          }
    
         </div>
+
 
       </div>
     </div>
