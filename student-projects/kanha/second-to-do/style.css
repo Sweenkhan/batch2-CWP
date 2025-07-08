@@ -1,0 +1,66 @@
+body {
+    background-color: rgb(60, 76, 76);
+    font-family: "Jost", serif;
+}
+
+h1 {
+    color: black
+}
+
+.container {
+    width: 360px;
+    padding: 33px;
+    text-align: center;
+    background-color: white;
+    margin-left: 33%;
+    margin-top: 10px;
+}
+
+input {
+    width: 270px;
+    padding: 8px;
+    border: 2px solid rgb(26, 121, 121);
+    outline: none;
+    font-size: 15px;
+}
+
+button {
+    width: 60px;
+    height: 41px;
+    background-color: rgb(4, 29, 29);
+    color: white;
+    border-radius: 20px;
+    font-size: 15px;
+    border-bottom: none;
+    outline: none;
+
+}
+
+button:hover {
+    background-color: bisque;
+    color: black;
+    transition: 0.10s;
+}
+
+ ul { 
+    background-color: rgb(31, 87, 87);
+    color: white;
+    font-size: 19px;
+    text-align: left;
+    padding: 7px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+li{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 3px solid white;
+}
+
+.text ul i { 
+    cursor: pointer;
+}

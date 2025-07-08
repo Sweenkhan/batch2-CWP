@@ -1,0 +1,17 @@
+
+.password{
+    position: relative;
+
+}
+.showPassword
+{
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+}
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}

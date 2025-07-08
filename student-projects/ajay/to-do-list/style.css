@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to top, #e80ada, #4407ee);
+}
+
+.container {
+  background-color: #f8fafc;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+  width: 450px;
+}
+
+h2 {
+  margin-bottom: 15px;
+  color: #616161;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+#task-input {
+  flex: 1;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+#add-btn {
+  padding: 10px 20px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#task-counter {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+/* list jo humne add ki h  */
+
+li.completed span {
+  text-decoration: line-through;
+  color: gray;
+  font-style: italic;
+}
+
+li input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.actions button {
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+  color: white;
+}
+
+.edit-btn {
+  background-color: #3b82f6;
+}
+
+.delete-btn {
+  background-color: #ef4444;
+}

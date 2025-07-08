@@ -1,0 +1,48 @@
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 50px;
+}
+.d-flex{
+    display: flex !important;
+}
+.parent{ 
+     display: flex;
+          align-items: center;
+           border: 2px solid red;
+           position: relative;
+           height: 500px;
+           width: 400px;
+           overflow: hidden;
+}
+
+.images{ 
+    
+    display: flex; 
+    position: absolute;
+    top: 0;
+    left: 0;
+     transition: left 2s ease;
+}
+
+.image{
+    height: 500px; 
+    width: 400px;
+}
+
+
+img{
+    height: 100%;
+    width: 100%; 
+}
+
+button{
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+}
+ 

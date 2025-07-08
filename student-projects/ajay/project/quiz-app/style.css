@@ -1,0 +1,64 @@
+.d-flex{
+    display: flex;
+}
+.js{
+    justify-content: space-between;
+}
+.hide{
+    display: none;
+}
+.opction{
+    background-color: antiquewhite;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 8px;
+    width: 80%;
+    margin: 15px;
+}
+.contioner{
+    
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    margin-top:50px !important;
+    width: 560px;
+}
+.question{
+    padding: 20px;
+}
+.question-number{
+    padding: 10px;
+}
+.m-auto{
+    margin: auto;
+}
+.app{
+    text-align: center;
+    text-transform: uppercase;
+}
+.next-btn{
+    border: none;
+    background-color: rgb(83, 206, 83);
+    margin: 15px;
+    padding: 10px 40px;
+    border-radius: 10px;
+}
+.back-btn{
+    border: none;
+    padding: 10px 30px;
+    background-color: yellowgreen;
+    border-radius: 10px;
+    margin: 10px;
+}
+.restart-btn{
+    border: none;
+    padding: 10px 30px;
+    background-color: peru;
+    border-radius: 10px;
+    margin: 10px;
+}
+.selected {
+    background-color: green;
+    color: #fff;
+}

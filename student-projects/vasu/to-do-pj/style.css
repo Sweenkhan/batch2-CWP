@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-image: url(image/bg.jpg);
+    /* background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; */
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background-color: rgb(214, 88, 147);
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+}
+
+h1 {
+    color: #4a6fa5;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+h1 i {
+    margin-right: 10px;
+    color: #4a6fa5;
+}
+
+.input-container {
+    display: flex;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid #e1e5ee;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s;
+}
+
+#taskInput:focus {
+    border-color: #4a6fa5;
+}
+
+#addBtn {
+    background-color: #4a6fa5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#addBtn:hover {
+    background-color: #3a5a8f;
+}
+
+#taskList {
+    list-style: none;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    transition: all 0.3s;
+}
+
+.task-item:hover {
+    background-color: #e9ecef;
+}
+
+.task-text {
+    flex: 1;
+    margin: 0 15px;
+    word-break: break-word;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #6c757d;
+}
+
+.task-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.task-btn {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.complete-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.complete-btn:hover {
+    background-color: #218838;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+    transform: scale(1.1);
+    box-shadow: 0 2px 8px rgba(220, 53, 69, 0.15);
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .input-container {
+        flex-direction: column;
+    }
+    
+    #addBtn {
+        width: 100%;
+        padding: 12px;
+    }
+}

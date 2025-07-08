@@ -1,0 +1,53 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./form.css">
+ </head>
+ <body>
+    <div class="form-container d-flex">
+         
+        <h1>Contact Form</h1>
+        <form class="d-flex">
+            
+            <div class="form-field d-flex">
+                <label for="firstName">First Name*</label>
+                <input type="text" name="firstName" id="firstName">
+                <span class="error" id="firstNameError"></span>
+            </div>
+         
+            <div class="form-field d-flex">
+                <label for="lastName">Last Name*</label>
+                <input type="text" name="lastName" id="lastName">
+                <span class="error" id="lastNameError"></span>
+            </div>
+         
+            <div class="form-field d-flex">
+                <label for="mobile">Mobile*</label>
+                <input type="number" name="mobile" id="mobile">
+                <span class="error" id="mobileError"></span>
+            </div>
+            
+            <div class="form-field d-flex">
+                <label for="email">Email*</label>
+                <input type="email" name="email" id="email">
+                <span class="error" id="emailError"></span>
+            </div>
+           
+            <div class="form-field d-flex">
+                <label for="password">Password*</label>
+                <input type="password" name="email" id="password">
+                <span class="error" id="passwordError"></span>
+                <button class="showPassword">show</button>
+            </div>
+
+            <button class="submitBtn" type="submit">Submit</button>
+           
+        </form>
+         
+    </div>
+    <script src="./form.js"></script>
+ </body>
+ </html>

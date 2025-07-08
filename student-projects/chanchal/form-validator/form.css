@@ -1,0 +1,66 @@
+*{
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-container{
+   margin: auto;
+   background-color: gainsboro;
+   width: 800px;
+   padding: 30px 0px;
+}
+
+.d-flex{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+label{
+   align-self: flex-start;
+   margin-bottom: 15px;
+}
+
+.form-field{
+   margin-bottom: 20px;
+}
+
+input{
+   width: 500px;
+   padding: 10px 0px 10px 10px;
+   border: 1px solid;
+   font-size: 16px;
+   border-radius: 5px;
+}
+
+.submitBtn{
+   width: 120px;
+   padding: 10px 20px;
+   font-size: 20px;
+   color: white;
+   background-color: green;
+   border-radius: 10px;
+   border: none;
+}
+
+.error{
+   font-size: 0.8em;
+   color:red;
+   top: -18px;
+   position: absolute;
+}
+
+.form-field{
+   position: relative;
+}
+
+#password{
+   position: relative;
+}
+ 
+.showPassword{
+   position: absolute;
+   top: 42px;
+   right: 10px;
+   border: none;
+}

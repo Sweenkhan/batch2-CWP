@@ -1,0 +1,203 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(125deg, #ff9a9e, #e72eb0d3);
+    animation: fadeIn 1s ease-in-out, backgroundShift 3s infinite alternate;
+}
+@keyframes backgroundShift {
+    0% {
+        background: linear-gradient(125deg, #ff9a9e, #e72eb0d3);
+    }
+    100% {
+        background: linear-gradient(125deg, #e72eb0d3, #ff9a9e);
+    }
+    50% {
+        background: linear-gradient(125deg, #ff9a9e, #e72eb0d3);
+    }
+
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.container {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    min-height: 400px;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.9);
+    min-width: 400px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.create-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    font-size: 20px;
+    padding: 8px 12px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #ff6f61;
+    box-shadow: 0 0 8px rgba(255, 111, 97, 0.5);
+    animation: borderPulse 1s infinite alternate;
+}
+
+@keyframes borderPulse {
+    from {
+        box-shadow: 0 0 8px rgba(248, 23, 2, 0.966);
+    }
+    to {
+        box-shadow: 0 0 15px rgba(177, 4, 230, 0.8);
+    }
+}
+.save {
+    padding: 8px 16px;
+    border-radius: 4px;
+    border-radius: 4px;
+    background-color: #ff6f61;
+    color: rgba(252, 247, 247, 0.877);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.save:hover {
+    background-color: #e65c50;
+    transform: translateY(-2px);
+}
+
+ul {
+    align-self: flex-start;
+    font-size: 1rem;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+li {
+    min-width: 300px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    
+}
+
+.delete {
+    padding: 5px 15px;
+    cursor: pointer;
+    background-color: #ff6f61;
+    color: white;
+    border-radius: 4px;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.delete:hover {
+    background-color: #e65c50;
+    transform: scale(1.1);
+    
+}
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff6f61;
+    text-shadow: 2px 2px 0 #ff9a9e, 4px 4px 0 #e72eb0d3, 6px 6px 0 rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #ff6f61;
+    animation: typing 5s steps(30, end) infinite, blink 0.5s step-end infinite;
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    from {
+        border-color: transparent;
+    }
+    to {
+        border-color: #ff6f61;
+    }
+}
+
