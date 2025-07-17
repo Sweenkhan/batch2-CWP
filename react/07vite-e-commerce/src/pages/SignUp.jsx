@@ -15,14 +15,11 @@ function SignUp() {
   const [password, setPassword] = useState("")
 
 
-
   function handleRegister(e){
     e.preventDefault()
-    console.log(name, email, phone, username, password)
-      
+    console.log(name, email, phone, username, password)     
   }
 
- 
 
   return (
     <div className='register'>
