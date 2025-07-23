@@ -12,17 +12,17 @@ function ProductCard({productData}) {
 
 
   return (
-    <div key={productData.id} className="max-w-sm bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 " style={{padding: "5px"}}>
+    <div key={productData.id} className=" max-w-sm bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 " style={{padding: "20px"}}>
      
       <img
-        className="w-full h-56 object-cover"
+        className=" h-56 w-full object-cover "
         src={productData.image}
         alt={productData.title}
         onClick={() => handleProductClcik(productData)}
       />
 
-      <div className="p-5">
-        <h2 className="text-xl font-semibold text-gray-800">{productData.title}</h2>
+      <div className="p-5 " style={{marginTop: "18px"}}>
+        <h3 className="text-lg font-semibold text-gray-800">{productData.title.length > 30 ? `${productData.title.substring(0, 30)}` : productData.title}</h3>
         <p className="text-gray-600 mt-2 text-sm">
          {productData.description.length > 40 ? `${productData.description.substring(0, 40)}....` : productData.description }
         </p>

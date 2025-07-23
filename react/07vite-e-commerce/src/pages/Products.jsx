@@ -1,8 +1,8 @@
-import React from 'react'
-import dummyProducts from '../assets/data/productData'
+//  import dummyProducts from '../assets/data/productData'
 import ProductCard from '../components/ProductCard' 
-import { useEffect } from 'react'
-import { useState } from 'react'
+import { useEffect,  useState } from 'react' 
+import axios from "axios"
+
 
 
 
@@ -13,11 +13,24 @@ function Products() {
 
    useEffect(() => {
 
-      fetch("https://fakestoreapi.com/products")
-      .then((res) => res.json())
-      .then((res) => {
-           console.log(res)
-      })
+
+      function fecthData(){
+          
+        axios.get("https://fakestoreapi.com/products")
+        .then((res) => {
+          // console.log(res.data)
+          setProductsData(res.data)
+        })
+
+      }
+
+       fecthData()
+
+      // fetch("https://fakestoreapi.com/products")
+      // .then((res) => res.json())
+      // .then((res) => {
+      //      console.log(res)
+      // })
 
    },  [])
 
@@ -28,7 +41,7 @@ function Products() {
        
 
   {
-   dummyProducts.map((product) => {
+   productsData.map((product) => {
     return (
           <ProductCard 
             productData = {product}
