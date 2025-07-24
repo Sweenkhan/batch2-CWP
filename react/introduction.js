@@ -26,3 +26,7 @@
 
 
 //empty fragments <></>
+
+//what is props?
+// props is a kind of data, which you are passing from parent to child. it's a one way data binding system. it will share 
+// data only with child component 
