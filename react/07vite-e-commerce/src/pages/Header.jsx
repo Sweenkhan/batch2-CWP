@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import "./Header.css";
-import { Link } from "react-router-dom"; 
-// import SearchIcon from "@mui/icons-material/Search";  
+import { Link } from "react-router-dom";  
+import { ProfileContext } from "../App"; 
 
 
 function Header() { 
   const [showsearchInput, setShowsearchInput] = useState(false)
   const [inputValue, setInputValue] = useState("") 
+
+  const {profileData} = useContext(ProfileContext)
 
 
   function handlonMouseOver(){ 
@@ -45,7 +47,12 @@ function Header() {
         <ul className="headerUl">
              <li> <Link to="/products" className='text-black'>Products</Link> </li>
              <li> <Link to="/about">About</Link> </li>
+
+             {(profileData.name != undefined) ?  
+
+             <li> {profileData.name} </li>  :  
              <li> <Link to="/sign-up">Sign-up</Link> </li>
+              }
         </ul>
       </div>
     </div>

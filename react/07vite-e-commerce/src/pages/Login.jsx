@@ -1,19 +1,30 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import "./Login.css"
 import { useNavigate } from "react-router-dom";
+import { ProfileContext } from '../App';
 
 
 function Login() {
 
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
+
   const navigate = useNavigate()
+  const {  setProfileData} = useContext(ProfileContext)
 
-  function handleSubmit(e) {
 
+  function handleSubmit(e) { 
     e.preventDefault()
+    // console.log(username, password)
+    setProfileData((prev) => 
+    ({["name"]: username, ["password"]: password})
+    )
 
+    setUsername("")
+    setPassword("")
+    
+    navigate("/")
   }
 
   return (
