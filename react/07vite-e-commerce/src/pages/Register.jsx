@@ -32,7 +32,10 @@ function handleChange(e){
 
   function handleRegister(e){
     e.preventDefault()
-    console.log(userProfile) 
+  
+  
+    localStorage.setItem("userData", JSON.stringify(userProfile) )
+  //  console.log(registerFor)
     
     setUserProfile({
        name: "",

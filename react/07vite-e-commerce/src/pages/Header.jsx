@@ -1,8 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";  
-import { ProfileContext } from "../App"; 
-
+import { ProfileContext } from "../App";  
 
 function Header() { 
   const [showsearchInput, setShowsearchInput] = useState(false)
@@ -44,12 +43,13 @@ function Header() {
           {/* <span> <SearchIcon className="search"/></span> */}
         </form>
         </div>
-        <ul className="headerUl">
+        <ul className="headerUl relative">
              <li> <Link to="/products" className='text-black'>Products</Link> </li>
              <li> <Link to="/about">About</Link> </li>
 
              {(profileData.name != undefined) ?  
 
+ 
              <li> {profileData.name} </li>  :  
              <li> <Link to="/sign-up">Sign-up</Link> </li>
               }

@@ -1,8 +1,8 @@
 import Footer from "./pages/Footer"
 import Header from "./pages/Header"
 import Home from "./pages/Home"
-import Products from "./pages/Products"
-// import SignUp from "./pages/SignUp"
+import Products from "./pages/Products" 
+import ProductDatail from "./components/ProductDetail"
 import About from "./pages/About"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Register from "./pages/Register"
@@ -15,11 +15,11 @@ export const ProfileContext = createContext()
 function App() {
 
 const [profileData, setProfileData] = useState({})
-
-console.log(profileData)
+const [productDetail, setProductDetail] = useState({})
+ 
 
   return (
-    <ProfileContext.Provider value={{profileData, setProfileData}} > 
+    <ProfileContext.Provider value={{profileData, setProfileData, productDetail, setProductDetail}} > 
 
    <div className="min-h-[100vh] flex flex-col items-center"> 
       <BrowserRouter > 
@@ -30,7 +30,8 @@ console.log(profileData)
           <Route path="/products" element={<Products />} />  
           <Route path="/login" element={<Login />} />
           <Route path="/sign-up" element={<Register />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/about" element={<About />} /> 
+          <Route path="/productDetail" element={<ProductDatail />} />
         </Routes>
         </div>
       <Footer /> 

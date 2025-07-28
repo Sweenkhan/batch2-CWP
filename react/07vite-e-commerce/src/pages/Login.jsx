@@ -16,15 +16,26 @@ function Login() {
 
   function handleSubmit(e) { 
     e.preventDefault()
+
     // console.log(username, password)
-    setProfileData((prev) => 
-    ({["name"]: username, ["password"]: password})
-    )
+    // setProfileData((prev) => 
+    // ({["name"]: username, ["password"]: password})
+    // )
+
+    
+    let data = JSON.parse(localStorage.getItem("userData"))
+
+    if(data.username === username && data.password === password){
+      alert("you have successfully logged in")
+      navigate("/")
+    }else {
+     alert("sorry wrong password or username ")
+      navigate("/login")
+    }
 
     setUsername("")
     setPassword("")
     
-    navigate("/")
   }
 
   return (

@@ -17,7 +17,8 @@ function SignUp() {
 
   function handleRegister(e){
     e.preventDefault()
-    console.log(name, email, phone, username, password)     
+    console.log(name, email, phone, username, password) 
+   
   }
 
 
