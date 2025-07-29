@@ -7,6 +7,7 @@ function App() {
   const [data, setData] = useState({})
 
  
+  
   useEffect(()=>{
 
     fetch("https://randomuser.me/api/")

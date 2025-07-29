@@ -30,3 +30,14 @@
 //what is props?
 // props is a kind of data, which you are passing from parent to child. it's a one way data binding system. it will share 
 // data only with child component 
+
+
+
+
+//useEffect hook
+//useEffect take two arguments one is a callback, which can be a function and in that function you can add your action.
+//which is most probably an api call. and second argument will be a dependenciy array.
+//if array is empty your action will work only when your page is rendering
+//if you are passing a value in that dependency array, whenever that value is chnaging your action will rerun
+
+//a clean up function, which you can give to return keyword

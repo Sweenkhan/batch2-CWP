@@ -14,7 +14,7 @@ export const ProfileContext = createContext()
 
 function App() {
 
-const [profileData, setProfileData] = useState({})
+const [profileData, setProfileData] = useState({...JSON.parse(localStorage.getItem("userData"))})
 const [productDetail, setProductDetail] = useState({})
  
 
