@@ -32,8 +32,6 @@
 // data only with child component 
 
 
-
-
 //useEffect hook
 //useEffect take two arguments one is a callback, which can be a function and in that function you can add your action.
 //which is most probably an api call. and second argument will be a dependenciy array.

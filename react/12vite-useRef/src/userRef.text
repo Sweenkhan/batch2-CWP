@@ -1,0 +1,6 @@
+The useRef hook in React is a built-in Hook that returns a mutable ref object. 
+This ref object persists for the full lifetime of the component and does not cause re-renders
+ when its .current property is updated. 
+
+
+ useRef allow you to make changes like real dom, withour re-rendering you component.
