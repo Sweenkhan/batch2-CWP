@@ -8,6 +8,7 @@ import './App.css'
 import SingleBlog from "./components/SingleBlog"
 import BlogLayout from "./components/BlogLayout"
 import BlogDetail from "./components/BlogDetail"
+import NotFound from "./components/NotFound"
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
                <Route path="blogDetail" element={<BlogDetail />} />
           
           </Route>
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </>
