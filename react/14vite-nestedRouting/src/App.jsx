@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import './App.css'
 import SingleBlog from "./components/SingleBlog"
 import BlogLayout from "./components/BlogLayout"
+import BlogDetail from "./components/BlogDetail"
 
 function App() {
 
@@ -16,13 +17,12 @@ function App() {
        <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-
-           
-          <Route path="/blog" element={<BlogLayout />} >
+          <Route path="about" element={<About />} />  
+          <Route path="blog" element={<BlogLayout />} >
 
                <Route index element={<Blog />} />
-               <Route path=":Id" element={<SingleBlog />} />
+               <Route path=":Id" element={<SingleBlog />} /> 
+               <Route path="blogDetail" element={<BlogDetail />} />
           
           </Route>
         </Routes>

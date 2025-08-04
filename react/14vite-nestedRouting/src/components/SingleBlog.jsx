@@ -8,7 +8,7 @@ function SingleBlog() {
   let params = useParams()
 
   const [singleBlogData, setSingleBlogData] = useState({})
-  console.log(params)
+  // console.log(params)
 
   useEffect(() => {
 
