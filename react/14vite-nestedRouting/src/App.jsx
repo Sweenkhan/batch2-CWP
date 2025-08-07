@@ -22,8 +22,8 @@ function App() {
           <Route path="blog" element={<BlogLayout />} >
 
                <Route index element={<Blog />} />
-               <Route path=":Id" element={<SingleBlog />} /> 
                <Route path="blogDetail" element={<BlogDetail />} />
+               <Route path="blog/:Id" element={<SingleBlog />} /> 
           
           </Route>
           <Route path="*" element={<NotFound />} />
