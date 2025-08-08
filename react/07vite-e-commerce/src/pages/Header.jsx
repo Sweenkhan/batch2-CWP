@@ -46,13 +46,9 @@ function Header() {
         <ul className="headerUl relative">
              <li> <Link to="/products" className='text-black'>Products</Link> </li>
              <li> <Link to="/about">About</Link> </li>
-
-             {(profileData.name != undefined) ?  
-
- 
-             <li> {profileData.name} </li>  :  
+  
              <li> <Link to="/sign-up">Sign-up</Link> </li>
-              }
+                 <li> <Link to="/cart">Cart</Link> </li>
         </ul>
       </div>
     </div>
