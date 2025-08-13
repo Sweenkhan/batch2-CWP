@@ -43,7 +43,7 @@ return (
 
       <div className="flex items-center justify-between mt-4">
         <span className="text-lg font-bold text-indigo-600">Rs {productData.price}</span>
-        <button onClick={() => dispatch(addToCart(productData.id))} style={{ padding: "3px 6px" }} className="px-4 py-4 bg-indigo-600 text-white rounded-2xl hover:bg-indigo-700 transition duration-200">
+        <button onClick={() => dispatch(addToCart(productData))} style={{ padding: "3px 6px" }} className="px-4 py-4 bg-indigo-600 text-white rounded-2xl hover:bg-indigo-700 transition duration-200">
           Add to Cart
         </button>
       </div>
