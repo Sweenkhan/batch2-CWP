@@ -1,29 +1,28 @@
-import React,{useContext, useEffect} from 'react' 
+import  { useContext, useEffect } from 'react'
 import { ProfileContext } from '../App'
 import axios from 'axios'
 
 
 function ProductDetail() {
- 
-  const {productDetail, setProductDetail}  = useContext(ProfileContext)
 
+  const { productDetail, setProductDetail } = useContext(ProfileContext) 
 
   useEffect(() => {
     axios.get(`https://fakestoreapi.com/products/${localStorage.getItem("productDataId")}`)
-    .then((res) => { 
-       setProductDetail(res.data)
-    })
+      .then((res) => {
+        setProductDetail(res.data)
+      })
   }, [])
 
 
 
   return (
-   <div key={productDetail.id} className=" max-w-sm bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 " style={{ padding: "20px" }}>
+    <div key={productDetail.id} className=" max-w-sm bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 " style={{ padding: "20px" }}>
 
       <img
         className=" h-56 w-full object-cover "
         src={productDetail.image}
-        alt={productDetail.title} 
+        alt={productDetail.title}
       />
 
       <div className="p-5 " style={{ marginTop: "18px" }}>

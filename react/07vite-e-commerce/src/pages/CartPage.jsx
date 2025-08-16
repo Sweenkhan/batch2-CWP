@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import ProductCard from '../components/ProductCard'
+import CartPageitems from '../components/CartPageitems'
 
 
 function CartPage() {
@@ -16,14 +17,20 @@ function CartPage() {
   useEffect(() => {
 
    if(cartItems.length > 0 && items.length > 0) { 
-    
-     let filterData =  items.filter(item => 
-        cartItems.some(cartItem => cartItem.id === item.id)
-      ) 
-     setCartItemData(filterData)
-    } 
+     
+    let filterData = []
+    for(let i = 0; i< items.length; i++){
+      for(let j = 0; j < cartItems.length; j++){
+        if(items[i].id === cartItems[j].id){  
+           filterData.push({...items[i], totalPrice: cartItems[j].totalPrice, totalQuantity: cartItems[j].quantity})
+        }
+      }
 
-  },[])
+    }
+    setCartItemData(filterData)
+  }
+
+  },[cartItems])
   
 
   
@@ -32,9 +39,9 @@ function CartPage() {
          { cartItems.length > 0 ? 
           <div> {
                cartItemsData.map((cartItemData) => {
-                return(
-                 <ProductCard productData={cartItemData} />
-                )
+                return( 
+                 <CartPageitems productData={cartItemData} key={cartItemData.id} />    
+                            )
                })
             }</div> 
           : <div style={{margin: "6rem"}}> Your card is empty</div>

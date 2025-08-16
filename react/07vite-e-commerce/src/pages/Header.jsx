@@ -2,12 +2,14 @@ import React, { useEffect, useState, useContext } from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";  
 import { ProfileContext } from "../App";  
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { useSelector } from "react-redux";
+
 
 function Header() { 
   const [showsearchInput, setShowsearchInput] = useState(false)
-  const [inputValue, setInputValue] = useState("") 
-
-  const {profileData} = useContext(ProfileContext)
+  const [inputValue, setInputValue] = useState("")  
+  const {cartItems} = useSelector(state => state.cart)
 
 
   function handlonMouseOver(){ 
@@ -24,9 +26,6 @@ function Header() {
          console.log(e.target.value)
          setInputValue(e.target.value)
   }
-
-
-
  
 
 
@@ -48,10 +47,15 @@ function Header() {
              <li> <Link to="/about">About</Link> </li>
   
              <li> <Link to="/sign-up">Sign-up</Link> </li>
-                 <li> <Link to="/cart">Cart</Link> </li>
+            <li style={{position: "relative"}}> <Link to="/cart"><ShoppingCartIcon sx={{fontSize: 30}}/>
+             <span 
+             style={{position: "absolute", right: "12px", top:"-5px", backgroundColor: "black", color: "white", 
+              width: "25px", height: "25px", borderRadius: "50%", padding: "3px 6px 0", border: "1px solid white"
+             }}>{cartItems.length}</span></Link> </li>
         </ul>
       </div>
     </div>
+
     <div className="min-h-[80px]"></div>
     </>
   );
