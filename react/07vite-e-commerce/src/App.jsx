@@ -17,10 +17,11 @@ function App() {
 
 const [profileData, setProfileData] = useState({...JSON.parse(localStorage.getItem("userData"))})
 const [productDetail, setProductDetail] = useState({})
+const [query, setQuery] = useState("")
  
 
   return (
-    <ProfileContext.Provider value={{profileData, setProfileData, productDetail, setProductDetail}} > 
+    <ProfileContext.Provider value={{profileData, setProfileData, productDetail, setProductDetail, query, setQuery}} > 
 
    <div className="min-h-[100vh] flex flex-col items-center"> 
       <BrowserRouter > 

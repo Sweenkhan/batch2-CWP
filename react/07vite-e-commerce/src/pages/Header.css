@@ -16,7 +16,7 @@
      font-family: Arial, Helvetica, sans-serif;
      /* box-shadow: 5px 5px 50px ; */
      border-bottom: solid 12px white;
-      
+    
  }
 
  .header h2 {
@@ -127,15 +127,36 @@
  }
 
 
+ .menu-toogle{
+        display: none;
+        position: relative;
+    }
 
 
- @media only screen and (max-width: 800px) {
+    .sideBar{
+        display: flex;
+        flex-direction: column;
+        
+        padding: 1rem;
+        background-color: white;
+        color: black;
+
+    }
+
+    
+.mobile-ul li{
+    padding: 0.5rem 0;
+}
+
+
+ @media only screen and (max-width: 768px) {
 
     .header{
         padding: 0.5rem 1.5rem;
     }
 
     .header .headerRight{ 
+        display: none;
         flex-direction: column;
         /* height: 4rem; */
         justify-content: space-between;
@@ -169,7 +190,9 @@
         font-size: 1.1rem;
     } 
 
-    .headerRight form .search { 
-        padding-bottom: 2px; 
+    
+
+    .menu-toogle{
+        display: block;
     }
  }

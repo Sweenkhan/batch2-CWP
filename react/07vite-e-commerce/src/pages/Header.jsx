@@ -1,30 +1,38 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState, useContext, useRef } from "react";
 import "./Header.css";
-import { Link } from "react-router-dom";  
+import { Link , useNavigate} from "react-router-dom";  
 import { ProfileContext } from "../App";  
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { useSelector } from "react-redux";
 
 
 function Header() { 
+
+    
   const [showsearchInput, setShowsearchInput] = useState(false)
-  const [inputValue, setInputValue] = useState("")  
+  const {query, setQuery} = useContext(ProfileContext)
   const {cartItems} = useSelector(state => state.cart)
+  const [menuOpen, setMenuOpen] = useState(false)
 
 
-  function handlonMouseOver(){ 
+  const navigate =  useNavigate()
+  const inputRef = useRef()
+
+  function handlonMouseOver(){  
+     inputRef.current.focus()
       setShowsearchInput(true)
   }
 
+
   function handlonMouseOut(){
-    setInputValue("")
+    inputRef.current.blur()
     setShowsearchInput(false)
   }
 
-
-  function handleChange(e){
-         console.log(e.target.value)
-         setInputValue(e.target.value)
+  
+  function handleChange(e){ 
+         navigate("/products")
+         setQuery(e.target.value) 
   }
  
 
@@ -33,15 +41,41 @@ function Header() {
     <> 
     <div className="header">
       <h2 className="logo"><Link to={"/"}>E-commerce</Link></h2>
+       
+       {/* mobile menu */}
+        <div className="menu-toogle" >
+
+       <button   onClick={() => setMenuOpen(!menuOpen) }>
+        {menuOpen ? "X" : "☰"}
+       </button>
+
+
+             {  menuOpen &&
+             
+             <div className="sideBar" style={{position: "absolute", right: "-1.2rem", top: "2rem", minHeight: "100vh"}}>
+              <ul className="mobile-ul">
+             <li> <Link to="/products" className='text-black'>Products</Link> </li>
+             <li> <Link to="/about">About</Link> </li>
+             <li> <Link to="/sign-up">Sign-up</Link> </li>
+            
+                 </ul>
+               </div>
+             }
+             </div>
+
+ 
+
+       {/* desktop navbar */}
       <div className="headerRight"  >
+
       <div className="formDiv"> 
         <form onMouseEnter={() => handlonMouseOver()} onMouseLeave={handlonMouseOut} >
 
-          <input type="text" className={(showsearchInput) ? "showInput" : "closeInput" } placeholder="Search..."
-           onChange={(e) => {handleChange(e)}} value={inputValue}/>
-          {/* <span> <SearchIcon className="search"/></span> */}
+           <input ref={inputRef} type="text" className={(showsearchInput) ? "showInput" : "closeInput" } placeholder="Search..."
+           onChange={(e) => {handleChange(e)}} value={query}/>
         </form>
         </div>
+
         <ul className="headerUl relative">
              <li> <Link to="/products" className='text-black'>Products</Link> </li>
              <li> <Link to="/about">About</Link> </li>
